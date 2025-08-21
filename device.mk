@@ -41,6 +41,14 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
+#Pocket mode
+
+PRODUCT_PACKAGES += \
+    PocketMode
+    
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/pocket/privapp-permissions-pocketmode.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pocketmode.xml
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
