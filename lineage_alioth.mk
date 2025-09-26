@@ -18,6 +18,16 @@ TARGET_INCLUDES_MIUI_CAMERA := true
 # Inherit from alioth device
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
+RISING_MAINTAINER="zenzer0s"
+
+RISING_MAINTAINER := zenzer0s
+
+TARGET_ENABLE_BLUR := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+
 PRODUCT_NAME := lineage_alioth
 PRODUCT_DEVICE := alioth
 PRODUCT_MANUFACTURER := Xiaomi
@@ -27,5 +37,7 @@ PRODUCT_MODEL := POCO F3
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildFingerprint=google/husky_beta/husky:16/BP41.250822.010/14082742:user/release-keys
+    BuildFingerprint=google/husky_beta/husky:16/BP41.250822.010/14082742:user/release-keys \
+    RisingChipset="Snapdragon 870" \
+    RisingMaintainer="zenzer0s"
 
